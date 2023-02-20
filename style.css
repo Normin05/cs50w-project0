@@ -4,29 +4,55 @@
     box-sizing: border-box;
 }
 
+
+
 :root{
     --instagram: rgb(255, 0, 0);
     --whatsapp: rgb(12, 99, 12);
     --facebook: rgb(21, 21, 226);
+    --github:  rgb(184, 189, 23);
 }
 
-body{
-    margin: 0;
-    font-family: sans-serif;
-    color: #8cbfe6;
-    position: relative;
-    padding-bottom: 3em;
-    min-height: 100vh;
-}
-
-.header {
+header {
 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    padding: 1em 0;
+    letter-spacing: 0.2em;
+    margin-bottom: 3em;
+    height: 90px;
+    width: 100%;
 }
 
-.navbar {
+.container{
+    margin: auto;
+    margin-top: 20px;
+    width: 960px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+    
+}
+
+
+
+footer{
+
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;   
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar{
+
     position: fixed;
     height: 80px;
     width: 100%;
@@ -34,7 +60,6 @@ body{
     left: 0;
     background: rgba(0, 0, 0, 0.4);
 }
-
 
 .navbar ul {
     float: right;
@@ -81,13 +106,17 @@ body{
     text-align: center;
 }
 
+h3{
 
-footer{
-    background: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    width: 100%;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
     
+
 }
+
+
+
 
 
 .social{
@@ -147,4 +176,252 @@ footer{
 
 .social ul li .instagram:hover{
     background: var(--instagram);
+}
+
+.social ul li .git:hover{
+    background: var(--github);
+}
+
+
+
+.perfil{
+    width: 200px ;
+    height: 200px ;
+    text-align: left;
+}
+
+.texto{
+    margin-right: 100px;
+    text-align: center;
+}
+
+#des{
+    text-align: left;
+}
+
+.colegio{
+
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+.cursos{
+
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+
+.container__card{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card__father{
+    margin: 20px;
+    perspective: 1000px;
+}
+
+.card__father:hover .card{
+    transform: rotateY(180deg);
+}
+
+
+.card{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+
+.card__front{
+    background-size: cover;
+    background-position: center;
+}
+
+
+.card__front,
+.card__back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.card__back{
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.body__card_front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transform: translateZ(60px);
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+}
+
+.body__card_back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+}
+
+.body__card_back p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.body__card_back input{
+    padding: 10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+}
+
+.body__card_back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+
+
+
+
+
+
+
+
+
+
+#t{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+
+
+
+
+.accordion{
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#collapseOne{
+
+    background-color: rgb(148, 163, 158);
+
+}
+
+#collapseTwo{
+
+    background-color: rgba(159, 199, 119, 0.889);
+
+}
+
+#collapseThree{
+
+    background-color: rgba(187, 39, 39, 0.486);
+
+}
+
+#collapseFour{
+
+    background-color: rgba(211, 201, 16, 0.815);
+
+}
+
+
+
+
+
+@media (max-width:1000px) {
+    
+    footer{
+
+        margin-top: 20px;
+        background: rgb(255, 255, 255);
+        width: 100%;   
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .navbar{
+    
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgb(255, 255, 255);
+    }
+
+    .navbar ul {
+        float: right;
+        margin-right: 20px;
+    }
+    
+    .navbar ul li {
+        list-style: none;
+        margin: 0 8px;
+        display: inline-block;
+        line-height: 80px;
+    }
+    
+    .navbar ul li a {
+        font-size: 20px;
+        font-family: 'Times New Roman', Times, serif;
+        color: rgb(0, 0, 0);
+        padding: 6px 13px;
+        text-decoration: none;
+        transition: .5s;
+    }
+    
+    .navbar ul li a.active,
+    .navbar ul li a:hover {
+        background: rgb(82, 79, 79);
+        border-radius: 15px 50px 50px 15px;
+    }
+
+
 }
