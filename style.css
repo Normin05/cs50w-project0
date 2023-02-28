@@ -306,7 +306,7 @@ h3{
 
 }
 .body__card_back{
-    border-radius: 50;
+    border-radius: 20;
 }
 
 @media (max-width:1000px) {
